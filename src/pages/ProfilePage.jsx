@@ -1,0 +1,29 @@
+import { LogOut, Pencil, Play, Settings, ShieldCheck, UserRound } from 'lucide-react';
+import { tracks, playlists } from '../data/musicData';
+import { useAudio } from '../context/AudioContext';
+import SongCard from '../components/SongCard';
+
+export default function ProfilePage({ session, onOpenAuth, onLogout, onSelectPlaylist }) {
+  const { likedTrackIds, playTrack } = useAudio();
+  const displayName = session?.name || 'Guest listener';
+  const likedTracks = tracks.filter((track) => likedTrackIds.includes(track.id));
+  const recommended = playlists.filter((playlist) => playlist.id !== 'liked-songs').slice(0, 4);
+
+  return (
+    <div className="min-h-full bg-[radial-gradient(circle_at_70%_0%,rgba(29,185,84,0.18),transparent_28rem)] px-4 pb-36 sm:px-8 md:pb-28">
+      <section className="relative -mx-4 overflow-hidden border-b border-white/10 bg-gradient-to-br from-[#183b27] via-[#111c16] to-[#121212] px-5 pb-7 pt-8 sm:-mx-8 sm:px-8 sm:pt-12">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-5 sm:flex-row sm:items-end">
+          <div className="relative"><img src={session?.avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=85'} alt={displayName} className="h-28 w-28 rounded-full border-4 border-white/15 object-cover shadow-2xl" /><span className="absolute bottom-1 right-1 rounded-full bg-[#1ed760] p-1.5 text-black"><UserRound className="h-4 w-4" /></span></div>
+          <div className="min-w-0 flex-1 text-center sm:text-left"><p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-emerald-200/70">Your profile</p><h1 className="display-heading text-4xl font-bold text-white sm:text-6xl">{displayName}</h1><p className="mt-2 text-sm text-zinc-300">{session ? session.email : 'Sign in to save your music and personalize your library.'}</p></div>
+          <div className="flex gap-2">{session ? <><button onClick={onLogout} className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-xs font-bold text-white hover:bg-white/10"><LogOut className="h-4 w-4" /> Log out</button><button className="rounded-full border border-white/20 p-2 text-zinc-300 hover:bg-white/10 hover:text-white" aria-label="Edit profile"><Pencil className="h-4 w-4" /></button></> : <button onClick={() => onOpenAuth('signup')} className="rounded-full bg-[#1ed760] px-5 py-2.5 text-xs font-bold text-black hover:bg-white">Create account</button>}</div>
+        </div>
+      </section>
+      <main className="mx-auto max-w-5xl space-y-10 py-8">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4"><div className="rounded-xl border border-white/10 bg-white/[0.04] p-4"><p className="text-2xl font-bold text-white">{likedTracks.length}</p><p className="text-xs text-zinc-400">Liked songs</p></div><div className="rounded-xl border border-white/10 bg-white/[0.04] p-4"><p className="text-2xl font-bold text-white">{playlists.length - 1}</p><p className="text-xs text-zinc-400">Playlists</p></div><div className="rounded-xl border border-white/10 bg-white/[0.04] p-4"><p className="text-2xl font-bold text-white">34</p><p className="text-xs text-zinc-400">Artists followed</p></div><div className="rounded-xl border border-white/10 bg-white/[0.04] p-4"><p className="flex items-center gap-2 text-sm font-bold text-[#1ed760]"><ShieldCheck className="h-4 w-4" /> Premium</p><p className="mt-1 text-xs text-zinc-400">Individual plan</p></div></div>
+        {!session && <section className="flex flex-col items-start justify-between gap-4 rounded-2xl border border-[#1ed760]/20 bg-[#1ed760]/10 p-5 sm:flex-row sm:items-center"><div><h2 className="text-lg font-bold text-white">Make this space yours</h2><p className="mt-1 text-sm text-zinc-300">Log in to keep likes, playlists, and listening history together.</p></div><button onClick={() => onOpenAuth('login')} className="rounded-full bg-white px-5 py-2.5 text-xs font-bold text-black hover:bg-[#1ed760]">Log in</button></section>}
+        <section><div className="mb-4 flex items-end justify-between"><div><p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#1ed760]">Your collection</p><h2 className="display-heading text-2xl font-bold text-white">Liked songs</h2></div><button onClick={() => onSelectPlaylist('liked-songs')} className="text-xs font-bold text-zinc-400 hover:text-white">Open playlist</button></div>{likedTracks.length ? <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">{likedTracks.slice(0, 4).map((track, index) => <SongCard key={track.id} image={track.cover} title={track.title} subtitle={track.artist} onClick={() => playTrack(track, likedTracks, index)} onPlay={() => playTrack(track, likedTracks, index)} />)}</div> : <p className="rounded-xl border border-dashed border-white/15 p-8 text-center text-sm text-zinc-400">Like songs while listening and they will show up here.</p>}</section>
+        <section><div className="mb-4 flex items-end justify-between"><div><p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">Keep exploring</p><h2 className="display-heading text-2xl font-bold text-white">Your playlists</h2></div><Settings className="h-5 w-5 text-zinc-500" /></div><div className="grid grid-cols-2 gap-4 sm:grid-cols-4">{recommended.map((playlist) => <SongCard key={playlist.id} image={playlist.cover} title={playlist.title} subtitle={playlist.description} onClick={() => onSelectPlaylist(playlist.id)} onPlay={() => { const list = tracks.filter((track) => playlist.trackIds.includes(track.id)); if (list.length) playTrack(list[0], list, 0); }} />)}</div></section>
+      </main>
+    </div>
+  );
+}
