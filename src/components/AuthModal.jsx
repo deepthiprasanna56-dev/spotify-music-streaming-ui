@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Eye, EyeOff, LockKeyhole, Mail, UserRound, X } from 'lucide-react';
 
 export default function AuthModal({ isOpen, mode, onClose, onAuthenticated, onSwitchMode }) {
@@ -32,7 +32,7 @@ export default function AuthModal({ isOpen, mode, onClose, onAuthenticated, onSw
           <label className="block"><span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-zinc-400">Password</span><div className="relative"><LockKeyhole className="absolute left-3 top-3 h-4 w-4 text-zinc-500" /><input required minLength={6} type={showPassword ? 'text' : 'password'} value={form.password} onChange={(event) => setForm({ ...form, password: event.target.value })} className="w-full rounded-lg border border-white/10 bg-white/5 py-2.5 pl-10 pr-10 text-sm text-white outline-none focus:border-[#1ed760]" placeholder="At least 6 characters" /><button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-2.5 text-zinc-500 hover:text-white" aria-label={showPassword ? 'Hide password' : 'Show password'}>{showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}</button></div></label>
           <button type="submit" className="w-full rounded-full bg-[#1ed760] py-3 text-sm font-bold text-black transition-colors hover:bg-white">{isSignup ? 'Create account' : 'Log in'}</button>
         </form>
-        <p className="mt-6 text-center text-xs text-zinc-400">{isSignup ? 'Already have an account?' : 'New to Spotify?'} <button onClick={onSwitchMode} className="font-bold text-white hover:text-[#1ed760]">{isSignup ? 'Log in' : 'Sign up'}</button></p>
+        <p className="mt-6 text-center text-xs text-zinc-400">{isSignup ? 'Already have an account?' : 'New to Soundwave?'} <button onClick={onSwitchMode} className="font-bold text-white hover:text-[#1ed760]">{isSignup ? 'Log in' : 'Sign up'}</button></p>
         <p className="mt-5 text-center text-[10px] leading-relaxed text-zinc-500">Demo authentication only. Your session stays on this device.</p>
       </div>
     </div>

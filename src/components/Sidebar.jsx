@@ -1,4 +1,4 @@
-import { Home, Search, Library, PlusSquare, Heart, ArrowDownCircle, Radio, Music } from 'lucide-react';
+﻿import { Home, Search, Library, PlusSquare, Heart, ArrowDownCircle, Radio, Music } from 'lucide-react';
 import { userProfile } from '../data/musicData';
 import { useAudio } from '../context/AudioContext';
 
@@ -11,7 +11,7 @@ export default function Sidebar({ currentView, onNavigate, onSelectPlaylist, sel
 
   return (
     <aside className="w-64 bg-black text-zinc-300 flex flex-col h-full shrink-0 select-none border-r border-white/5">
-      {/* Spotify Brand Header */}
+      {/* Soundwave Brand Header */}
       <div className="p-6 pb-4">
         <button
           onClick={() => onNavigate('home')}
@@ -22,7 +22,7 @@ export default function Sidebar({ currentView, onNavigate, onSelectPlaylist, sel
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.307c-.216.354-.678.468-1.032.252-2.825-1.727-6.38-2.118-10.569-1.162-.405.093-.812-.16-.905-.565-.092-.405.161-.812.566-.905 4.588-1.047 8.528-.604 11.687 1.332.355.216.469.678.253 1.048zm1.469-3.266c-.272.441-.853.582-1.294.31-3.233-1.986-8.161-2.56-11.984-1.4-1.498.152-.988-.198-1.14-.696-.151-.498.199-.988.697-1.14 4.372-1.327 9.805-.688 13.411 1.532.44.272.582.853.31 1.294zm.126-3.412C15.228 8.35 8.847 8.14 5.155 9.26c-.604.184-1.246-.16-1.43-.764-.183-.604.161-1.246.765-1.43 4.249-1.29 11.296-1.049 15.753 1.597.545.324.726 1.031.402 1.576-.323.544-1.03.725-1.575.402z"/>
             </svg>
           </div>
-          <span className="font-bold text-xl tracking-tight text-white">Spotify</span>
+          <span className="font-bold text-xl tracking-tight text-white">Soundwave</span>
         </button>
       </div>
 
@@ -157,3 +157,4 @@ export default function Sidebar({ currentView, onNavigate, onSelectPlaylist, sel
     </aside>
   );
 }
+

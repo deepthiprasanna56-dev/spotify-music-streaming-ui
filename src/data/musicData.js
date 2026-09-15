@@ -1487,7 +1487,7 @@ export const playlists = [
     description: "The hottest tracks across the globe right now: Bruno Mars, Sabrina Carpenter, Billie Eilish & more.",
     cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&auto=format&fit=crop&q=85',
     saves: '35,812,490',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-emerald-900 via-zinc-900 to-black',
     accentColor: '#10b981',
     trackIds: ['track-1', 'track-bruno-1', 'track-sabrina-1', 'track-billie-2', 'track-taylor-1', 'track-post-1', 'track-drake-1'],
@@ -1498,20 +1498,20 @@ export const playlists = [
     description: 'The essential tracks from the global icons: Dynamite, Butter, Boy With Luv, and more.',
     cover: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=85',
     saves: '9,420,400',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-purple-950 via-zinc-950 to-black',
     accentColor: '#a855f7',
     trackIds: ['track-bts-1', 'track-bts-2', 'track-bts-3', 'track-bts-4', 'track-bts-5', 'track-bts-6', 'track-bts-7', 'track-bts-8', 'track-bts-9', 'track-bts-10', 'track-bts-11', 'track-bts-12', 'track-bts-13', 'track-bts-14', 'track-bts-15', 'track-bts-16'],
   },
   {
-    id: 'world-music-atlas', title: 'World Music Atlas', description: 'A borderless mix of Indian, K-pop, Latin, African, European, and global pop anthems.', cover: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=85', saves: '6,240,800', owner: 'Spotify', gradient: 'from-cyan-950 via-zinc-900 to-black', accentColor: '#06b6d4', trackIds: ['track-india-1', 'track-india-4', 'track-india-5', 'track-global-1', 'track-global-2', 'track-global-4', 'track-world-7', 'track-world-9', 'track-world-10', 'track-bts-15', 'track-bts-16']
+    id: 'world-music-atlas', title: 'World Music Atlas', description: 'A borderless mix of Indian, K-pop, Latin, African, European, and global pop anthems.', cover: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=85', saves: '6,240,800', owner: 'Soundwave', gradient: 'from-cyan-950 via-zinc-900 to-black', accentColor: '#06b6d4', trackIds: ['track-india-1', 'track-india-4', 'track-india-5', 'track-global-1', 'track-global-2', 'track-global-4', 'track-world-7', 'track-world-9', 'track-world-10', 'track-bts-15', 'track-bts-16']
   },  {
     id: 'hip-hop-central',
     title: 'Hip-Hop Central',
     description: 'The titans of rap: Kendrick Lamar, Drake, Travis Scott, and Post Malone.',
     cover: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=85',
     saves: '22,390,440',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-amber-950 via-zinc-900 to-black',
     accentColor: '#f59e0b',
     trackIds: ['track-8', 'track-kendrick-2', 'track-drake-1', 'track-travis-1', 'track-travis-2', 'track-post-3', 'track-14'],
@@ -1522,7 +1522,7 @@ export const playlists = [
     description: 'Kick back with warm beats, smooth mellow synths, and calming rhythms.',
     cover: 'https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=600&auto=format&fit=crop&q=85',
     saves: '13,240,230',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-indigo-950 via-zinc-900 to-black',
     accentColor: '#6366f1',
     trackIds: ['track-3', 'track-6', 'track-9', 'track-12', 'track-15', 'track-16', 'track-ed-2'],
@@ -1533,7 +1533,7 @@ export const playlists = [
     description: 'Chart-toppers by Ariana Grande, Taylor Swift, Ed Sheeran, Olivia Rodrigo & Sabrina Carpenter.',
     cover: 'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&auto=format&fit=crop&q=85',
     saves: '18,410,000',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-rose-950 via-zinc-900 to-black',
     accentColor: '#f43f5e',
     trackIds: ['track-taylor-1', 'track-sabrina-1', 'track-ariana-1', 'track-ed-1', 'track-olivia-1', 'track-2'],
@@ -1544,7 +1544,7 @@ export const playlists = [
     description: 'Soulful Bollywood hits featuring Arijit Singh, Pritam, and chart-topping romantic ballads.',
     cover: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=85',
     saves: '11,105,400',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-orange-950 via-zinc-900 to-black',
     accentColor: '#f97316',
     trackIds: ['track-arijit-1', 'track-arijit-2', 'track-arijit-3', 'track-india-4', 'track-india-5', 'track-india-6'],
@@ -1555,7 +1555,7 @@ export const playlists = [
     description: 'Keep calm and focus with ambient electronic soundscapes and subtle rhythmic pulses.',
     cover: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&auto=format&fit=crop&q=85',
     saves: '8,415,900',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-teal-950 via-zinc-900 to-black',
     accentColor: '#14b8a6',
     trackIds: ['track-6', 'track-7', 'track-12', 'track-13', 'track-coldplay-1'],
@@ -1566,7 +1566,7 @@ export const playlists = [
     description: 'High-energy bangers to smash your PR and push past the limits.',
     cover: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop&q=85',
     saves: '10,210,400',
-    owner: 'Spotify',
+    owner: 'Soundwave',
     gradient: 'from-lime-950 via-zinc-900 to-black',
     accentColor: '#84cc16',
     trackIds: ['track-travis-1', 'track-8', 'track-post-3', 'track-bts-9', 'track-2'],
@@ -1782,4 +1782,5 @@ export const albums = [
     description: 'Grammy Album of the Year featuring Get Lucky and Instant Crush.'
   }
 ];
+
 

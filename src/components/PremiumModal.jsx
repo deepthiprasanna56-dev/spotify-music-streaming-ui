@@ -1,4 +1,4 @@
-import { X, Check, Sparkles, ShieldCheck, Zap, Music2 } from 'lucide-react';
+﻿import { X, Check, Sparkles, ShieldCheck, Zap, Music2 } from 'lucide-react';
 import { useAudio } from '../context/AudioContext';
 
 export default function PremiumModal({ isOpen, onClose }) {
@@ -49,7 +49,7 @@ export default function PremiumModal({ isOpen, onClose }) {
       features: [
         '6 Premium accounts for family members',
         'Block explicit music for children',
-        'Spotify Kids app access',
+        'Soundwave Kids app access',
         'Family Mix playlist',
         'Cancel anytime',
       ],
@@ -74,7 +74,7 @@ export default function PremiumModal({ isOpen, onClose }) {
   ];
 
   const handleSelectPlan = (plan) => {
-    showToast(`Subscribed to Spotify Premium ${plan.name}! Enjoy unlimited music.`);
+    showToast(`Subscribed to Soundwave Premium ${plan.name}! Enjoy unlimited music.`);
     onClose();
   };
 
@@ -101,7 +101,7 @@ export default function PremiumModal({ isOpen, onClose }) {
         <div className="text-center max-w-2xl mx-auto mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1db954]/20 text-[#1db954] text-xs font-bold uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Spotify Premium</span>
+            <span>Soundwave Premium</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-2">
             Get 1 Month Free of Premium
@@ -185,3 +185,4 @@ export default function PremiumModal({ isOpen, onClose }) {
     </div>
   );
 }
+

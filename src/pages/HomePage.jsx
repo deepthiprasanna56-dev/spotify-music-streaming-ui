@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Play, Pause, Heart, Sparkles, ChevronRight, Disc, Users, Radio, Music2 } from 'lucide-react';
 import { tracks, playlists, artists, podcasts, albums } from '../data/musicData';
 import { useAudio } from '../context/AudioContext';
@@ -402,7 +402,7 @@ export default function HomePage({ onSelectPlaylist, onSelectArtist, onNavigate 
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                   Trending Playlists
                 </h2>
-                <p className="text-xs sm:text-sm text-zinc-400">Curated by Spotify editors</p>
+                <p className="text-xs sm:text-sm text-zinc-400">Curated by Soundwave editors</p>
               </div>
             </div>
 
@@ -508,3 +508,4 @@ export default function HomePage({ onSelectPlaylist, onSelectArtist, onNavigate 
     </div>
   );
 }
+

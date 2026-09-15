@@ -61,7 +61,7 @@ export default function Topbar({
   };
 
   const handleInstall = () => {
-    showToast('Spotify Web App installed successfully!');
+    showToast('Soundwave Web App installed successfully!');
   };
 
   const handleMarkAllRead = () => {
@@ -299,6 +299,7 @@ export default function Topbar({
     </header>
   );
 }
+
 
 
 

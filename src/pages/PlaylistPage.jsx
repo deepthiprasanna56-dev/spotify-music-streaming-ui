@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Play, Pause, Heart, Clock, MoreHorizontal, Download, ArrowDownCircle, CheckCircle2, Share2, ListPlus } from 'lucide-react';
 import { playlists, tracks, userProfile } from '../data/musicData';
 import { useAudio } from '../context/AudioContext';
@@ -110,7 +110,7 @@ export default function PlaylistPage({ playlistId, onSelectArtist }) {
 
             {/* Meta row */}
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 text-xs text-zinc-300 font-medium">
-              <span className="font-bold text-white">{playlist.owner || 'Spotify'}</span>
+              <span className="font-bold text-white">{playlist.owner || 'Soundwave'}</span>
               <span>•</span>
               <span>{playlist.saves} saves</span>
               <span>•</span>
@@ -262,3 +262,4 @@ export default function PlaylistPage({ playlistId, onSelectArtist }) {
     </div>
   );
 }
+
